@@ -16,9 +16,9 @@ const handleChange = e => {
 const handleSubmit = e => {
   e.preventDefault();
 
-   props.onSubmit({
+  props.onSubmit({
     id: Math.floor(Math.random() * 10000),
-   text: input 
+  text: input 
   });
 
 setInput('')
@@ -26,24 +26,24 @@ setInput('')
 
   return (
     <form className='todo-form' onSubmit={handleSubmit}>
-     {props.edit ? ( 
-     
-     <>
-     <input
-       type='text'
-       placeholder='Update your item'
-       value={input}
-       name='text'
-       className='todo-input edit'
-       onChange={handleChange}
-       ref={inputRef}
-       />
-       <button className='todo-button edit'>Update</button>
-       </>
-       ) :
-       ( 
+      {props.edit ? ( 
+      
+      <>
+      <input
+        type='text'
+        placeholder='Update your item'
+        value={input}
+        name='text'
+        className='todo-input edit'
+        onChange={handleChange}
+        ref={inputRef}
+        />
+        <button className='todo-button edit'>Update</button>
+        </>
+        ) :
+        ( 
         <>
-       <input
+        <input
         type='text'
         placeholder='Add a todo'
         value={input}
